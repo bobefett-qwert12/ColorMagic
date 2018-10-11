@@ -12,6 +12,8 @@ public class ColorChangeViewController: UIViewController
 {
     private lazy var myColor : ColorTool = ColorTool()
     
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var firstLabel: UILabel!
     
     public override func viewDidLoad()-> Void
     {
@@ -24,7 +26,13 @@ public class ColorChangeViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func colorClick(_ sender: UIButton) -> Void
+    {
+        self.view.backgroundColor = myColor.createRandomColor()
+        firstButton.backgroundColor = myColor.createRandomColor()
+        firstLabel.textColor = myColor.createRandomColor()
+    }
 
 }
 
