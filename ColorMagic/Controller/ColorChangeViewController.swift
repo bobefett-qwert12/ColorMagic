@@ -8,14 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+public class ColorChangeViewController: UIViewController
+{
+    private lazy var myColor : ColorTool = ColorTool()
+    
+    
+    public override func viewDidLoad()-> Void
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    public override func didReceiveMemoryWarning() -> Void
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
